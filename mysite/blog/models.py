@@ -8,7 +8,7 @@ class Blog(models.Model):
     posted = models.DateTimeField('posted date')
 
     def __str__(self):
-        return self.content
+        return self.title
 
 
 class Comments(models.Model):

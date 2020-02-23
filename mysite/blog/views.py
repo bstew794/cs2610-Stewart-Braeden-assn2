@@ -3,8 +3,9 @@ from .models import Blog, Comments
 
 
 def index(request):
-    latest_blog_list = Blog.objects.order_by('-posted')[3:]
-    return render(request, 'blog/index.html', {'latest_blog_list': latest_blog_list})
+    latest_blog_list = Blog.objects.order_by('-posted')[:3]
+    context = {'latest_blog_list': latest_blog_list}
+    return render(request, 'blog/index.html', context)
 
 
 def archive(request):
