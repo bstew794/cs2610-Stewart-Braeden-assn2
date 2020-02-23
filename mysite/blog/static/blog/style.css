@@ -1,0 +1,112 @@
+nav{
+  background-color: #800000;
+  overflow: hidden;
+}
+nav a{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  border-right: 1px solid #bbb;
+}
+nav a:last-child {
+  border-right: none;
+}
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+body {
+  font-family: Times New Roman;
+  margin: 25px;
+  margin-left: 200px;
+  margin-right: 200px;
+  background: url("/static/clientProfile/default_background.jpg");
+}
+body header {
+  padding: 10px;
+  text-align: left;
+  background: white;
+}
+#blog {
+  float: left;
+  width: 74%;
+}
+
+#display {
+  float: right;
+  width: 25%;
+  padding-left: 10px;
+}
+#display .card{
+  background-color: #d2b48c;
+}
+#caption{
+  font-style: italic;
+}
+#blog .card{
+  border-radius: 25px;
+}
+#portrait {
+  padding: 0px;
+  margin-top: 0px;
+}
+#games {
+  padding: 5px;
+}
+#DnD {
+  padding: 5px;
+}
+#firearms {
+  padding: 5px;
+}
+#biography .card {
+  width: 64%;
+}
+#row0 .card {
+  float: left;
+}
+#row1 .card {
+  float: right;
+}
+#row2 .card {
+  float: left;
+}
+.card {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+p {
+  font-size: 16px;
+}
+#aboutHyper{
+  color: black
+}
+#tipsHyper{
+  color: black;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body footer {
+  bottom: 0;
+  left: 0;
+  height: 45px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: #800000;
+  color: white;
+  width: 100%;
+}
+#techTips {
+background-color: white;
+padding: 10px;
+}
