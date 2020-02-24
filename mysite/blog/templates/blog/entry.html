@@ -20,7 +20,7 @@
         <p>{{ blog.content }}</p>
     </div>
 
-    {% for comment in blog.comments_set.all %}
+    {% for comment in blog.comment_set.all %}
         <div class="card">
             <p>{{ comment.content }}</p>
             <h5>by {{ comment.commenter }} ({{ comment.email }}), posted on {{ comment.posted }}</h5>
