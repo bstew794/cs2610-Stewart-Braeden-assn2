@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Tips</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+<nav>
+    <a href="../">Home</a>
+    <a href="">Tech Tips</a>
+    <a href="../about_me">about</a>
+</nav>
+
+<div id="techTips">
+    <h2>Git Commands:</h2>
+    <p>
+        Git Add; this prepares a file for Git Commit:<br> <code>git add [file]</code><br><br>
+        Git Commit; this saves file changes to the repository as a version to later be pushed to a remote origin,
+        along with a message:<br>
+        <code>git commit -m [message] </code><br><br>
+        Git Status; this checks the working directory for file changes:<br>
+        <code>git status</code><br><br>
+        Git Push; this pushes the staged commits to remote repository:<br>
+        <code>git push -u origin</code><br><br>
+    </p>
+    <h2>CSS Basics:</h2>
+    <p>
+        background-color: this changes the background for the HTML element (.class, or #id) it is linked to:<br>
+        <code>[object] {background-color: [color hex code];}</code><br><br>
+        color: this changes the color of the text of the object is linked to:<br>
+        <code>[object] {color: [color hex code];}</code><br><br>
+        font-family: this changes the font family for the object's text:<br>
+        <code>[object] {font-family: [font family];}</code><br><br>
+        font-style: this changes the style of the font (underlined, italicized, etc):<br>
+        <code>[object] {font-style: [font style];}</code><br><br>
+        text-align: determines text alignment within the object:<br>
+        <code>[object] {text-align: [alignment direction];}</code><br><br>
+        margin: dictates how many pixels of space an object should have between itself and other objects:<br>
+        <code>[object] {margin: [quantity of pixels]px;}</code><br><br>
+        padding: pads items within the object:<br>
+        <code>[object] {padding: {quantity of pixels]px;}</code><br><br>
+    </p>
+    <h2>HTML Basics</h2>
+    <p>
+        I am still figuring out this part...
+    </p>
+</div>
+
+<footer>
+    <h4>maintained by: bstewart794@gmail.com</h4>
+</footer>
+</body>
+</html>

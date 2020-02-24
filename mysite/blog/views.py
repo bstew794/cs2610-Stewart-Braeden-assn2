@@ -16,3 +16,11 @@ def archive(request):
 def entry(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     return render(request, 'blog/entry.html', {'blog': blog})
+
+
+def about_me(request):
+    return render(request, 'blog/about.html')
+
+
+def tech_tips(request):
+    return render(request, 'blog/tips.html')
