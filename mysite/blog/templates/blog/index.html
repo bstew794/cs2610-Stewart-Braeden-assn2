@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
 </head>
 <body>
-{% if latest_blog_list %}
-    <ul>
-        {% for blog in latest_blog_list %}
-            <li><a href="{% url 'blog:entry' blog.id %}">{{ blog.title }}</a></li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No blog is available.</p>
-{% endif %}
+<nav>
+    <a href="">Home</a>
+    <a href="tech_tips">Tech Tips</a>
+    <a href="about_me">about</a>
+</nav>
+
+<div class="row">
+    {% if latest_blog_list %}
+        <div id="blog">
+            {% for blog in latest_blog_list %}
+                <div class="card">
+                    <h2><a class="blog_title" href="{% url 'blog:entry' blog.id %}">{{ blog.title }} by
+                        {{ blog.author }}, {{ blog.posted }}</a></h2>
+                    <p>{{ blog.content }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No blog is available.</p>
+    {% endif %}
+    <div id="display">
+        <div class="card">
+            <h1><a id="aboutHype" href="about_me">About Me:</a></h1>
+            <img id="portrait" src="/static/blog/images/anonymous.png" alt="Anonymous Rancher" width="400" height="400">
+            <p id="caption">Portrait of myself preparing for an interview in Houston, Texas</p>
+        </div>
+        <div class="card">
+            <h2><a id="tipsHype" href="tech_tips">Tech Tips:</a></h2>
+            <p>I have all you need to become a tech wizard yourself in HTML5, CSS, and Git!</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <h4>maintained by: bstewart794@gmail.com</h4>
+</footer>
+
 </body>
 </html>

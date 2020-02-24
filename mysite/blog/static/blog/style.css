@@ -24,7 +24,7 @@ body {
   margin: 25px;
   margin-left: 200px;
   margin-right: 200px;
-  background: url("/static/clientProfile/default_background.jpg");
+  background: url('/static/blog/images/default_background.jpg');
 }
 body header {
   padding: 10px;
@@ -35,7 +35,19 @@ body header {
   float: left;
   width: 74%;
 }
-
+#blog .card{
+  border-radius: 25px;
+  background-color: white;
+}
+#blog a{
+    color: black;
+    text-decoration: none;
+}
+.card {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
 #display {
   float: right;
   width: 25%;
@@ -47,8 +59,13 @@ body header {
 #caption{
   font-style: italic;
 }
-#blog .card{
-  border-radius: 25px;
+p{
+  font-size: 16px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 #portrait {
   padding: 0px;
@@ -75,26 +92,17 @@ body header {
 #row2 .card {
   float: left;
 }
-.card {
-  background-color: white;
-  padding: 10px;
-  margin-top: 10px;
-}
-p {
-  font-size: 16px;
-}
 #aboutHyper{
   color: black
 }
 #tipsHyper{
   color: black;
 }
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+#techTips {
+background-color: white;
+padding: 10px;
 }
-body footer {
+body footer{
   bottom: 0;
   left: 0;
   height: 45px;
@@ -105,8 +113,4 @@ body footer {
   background-color: #800000;
   color: white;
   width: 100%;
-}
-#techTips {
-background-color: white;
-padding: 10px;
 }
