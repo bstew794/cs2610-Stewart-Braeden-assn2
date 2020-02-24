@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Archive</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
 </head>
 <body>
+<nav>
+    <a href="../">Home</a>
+    <a href="../tech_tips">Tech Tips</a>
+    <a href="">Archive</a>
+    <a href="../about_me">about</a>
+</nav>
 
+<div class="row">
+    {% if latest_blog_list %}
+        <div id="blog">
+            {% for blog in latest_blog_list %}
+                <div class="card">
+                    <h2><a href="{% url 'blog:entry' blog.id %}">{{ blog.title }} by
+                        {{ blog.author }}, {{ blog.posted }}</a></h2>
+                    <p>{{ blog.content }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No blog is available.</p>
+    {% endif %}
+</div>
+
+<footer>
+    <h4>maintained by: bstewart794@gmail.com</h4>
+</footer>
 </body>
 </html>
