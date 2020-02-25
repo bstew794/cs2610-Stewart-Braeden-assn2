@@ -24,8 +24,13 @@
                         {{ blog.author }}, {{ blog.posted }}</a></h2>
                     <p>{{ blog.content }}</p>
                 </div>
+
                 <h5>Comments: {{ blog.comment_set.count }}</h5>
             {% endfor %}
+
+            <div class="card">
+                <h3><a href="archive">More...</a> </h3>
+            </div>
         </div>
 
     {% else %}
@@ -40,7 +45,11 @@
 
         <div class="card">
             <h2><a id="tipsHype" href="tech_tips">Tech Tips:</a></h2>
-            <p>I have all you need to become a tech wizard yourself in HTML5, CSS, and Git!</p>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>Git</li>
+            </ul>
         </div>
     </div>
 </div>
