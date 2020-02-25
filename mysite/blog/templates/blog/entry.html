@@ -25,6 +25,8 @@
             <p>{{ comment.content }}</p>
             <h5>by {{ comment.commenter }} ({{ comment.email }}), posted on {{ comment.posted }}</h5>
         </div>
+    {% empty %}
+        <p>No comments have been created yet...</p>
     {% endfor %}
 </div>
 <footer>

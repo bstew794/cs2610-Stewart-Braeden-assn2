@@ -25,6 +25,8 @@ body{
   margin-left: 200px;
   margin-right: 200px;
   background: url('/static/blog/images/default_background.jpg');
+  background-repeat: no-repeat;
+  background-color: #87A9B5;
 }
 body header{
   padding: 10px;

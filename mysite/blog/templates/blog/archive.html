@@ -24,6 +24,7 @@
                         {{ blog.author }}, {{ blog.posted }}</a></h2>
                     <p>{{ blog.content }}</p>
                 </div>
+                <h5>Comments: {{ blog.comment_set.count }}</h5>
             {% endfor %}
         </div>
     {% else %}
