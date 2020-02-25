@@ -1,5 +1,8 @@
-from django.shortcuts import get_object_or_404, render
+import datetime
+
+from django.shortcuts import get_object_or_404, render, redirect
 from .models import Blog, Comment
+from .forms import CommentForm
 
 
 def index(request):
@@ -16,6 +19,25 @@ def archive(request):
 def entry(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     return render(request, 'blog/entry.html', {'blog': blog})
+
+
+def add_comment(request, blog_id):
+    blog = get_object_or_404(Blog, pk=blog_id)
+
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.blog = blog
+            comment.posted = datetime.datetime.now()
+            comment.save()
+            return redirect('./', pk=blog_id)
+
+    else:
+        form = CommentForm()
+
+    return render(request, 'blog/add_comment.html', {'form': form})
 
 
 def about_me(request):

@@ -20,6 +20,8 @@
         <p>{{ blog.content }}</p>
     </div>
 
+    <a class="btn btn-default" href="{% url 'blog:add_comment' blog.id %}">Add comment</a>
+
     {% for comment in blog.comment_set.all %}
         <div class="card">
             <p>{{ comment.content }}</p>
