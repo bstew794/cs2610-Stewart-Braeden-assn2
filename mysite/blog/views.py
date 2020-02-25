@@ -18,11 +18,6 @@ def archive(request):
 
 def entry(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
-    return render(request, 'blog/entry.html', {'blog': blog})
-
-
-def add_comment(request, blog_id):
-    blog = get_object_or_404(Blog, pk=blog_id)
 
     if request.method == "POST":
         form = CommentForm(request.POST)
@@ -32,12 +27,14 @@ def add_comment(request, blog_id):
             comment.blog = blog
             comment.posted = datetime.datetime.now()
             comment.save()
-            return redirect('./', pk=blog_id)
+
+            form = CommentForm()
+            return render(request, 'blog/entry.html', {'blog': blog, 'form': form})
 
     else:
         form = CommentForm()
 
-    return render(request, 'blog/add_comment.html', {'form': form})
+    return render(request, 'blog/entry.html', {'blog': blog, 'form': form})
 
 
 def about_me(request):
