@@ -24,7 +24,7 @@
                 <div class="card">
                     <h2><a href="{% url 'blog:entry' blog.id %}">{{ blog.title }} by
                         {{ blog.author }}, {{ blog.posted }}</a></h2>
-                    <p>{{ blog.content }}</p>
+                    <p>{{ blog.content|truncatewords:100 }}</p>
                 </div>
 
                 <h5>Comments: {{ blog.comment_set.count }}</h5>
