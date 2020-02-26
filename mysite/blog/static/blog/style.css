@@ -53,11 +53,11 @@ body footer{
   border-radius: 25px;
   background-color: white;
 }
-#blog a{
+.card a{
     color: black;
     text-decoration: none;
 }
-.row a:hover{
+.card a:hover{
     background-color: #ddd;
 }
 .card {
